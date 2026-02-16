@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tiago Scarpelli | Psicanalista</title>
-  <meta name="description" content="Psicanalista • Atendimento online. Sessões por videochamada. Para adultos e adolescentes." />
+  <meta name="description" content="Psicólogo (CRP 04/25609) • Psicanalista. Sessões online por videochamada." />
   <style>
     :root{
       --bg:#0b1220;
@@ -12,6 +12,7 @@
       --txt:#f2f4f8;
       --muted:rgba(242,244,248,.82);
       --btn:#25D366;
+      --stroke:rgba(242,244,248,.22);
     }
 
     html, body { height:100%; }
@@ -51,7 +52,6 @@
       text-align:center;
     }
 
-    /* AVATAR */
     .avatar{
       width:112px;
       height:112px;
@@ -59,18 +59,23 @@
       object-fit:cover;
       display:block;
       margin:0 auto 14px;
-
-      /* P&B + contraste */
       filter: grayscale(100%) contrast(1.05) brightness(1.02);
-
-      /* borda e sombra para destacar do fundo */
       border:2px solid rgba(242,244,248,.25);
       box-shadow:0 10px 30px rgba(0,0,0,.35);
     }
 
     h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px;}
-    .sub{margin:0 0 14px;color:var(--muted);font-size:16px;line-height:1.4;}
-    .desc{margin:0 0 20px;color:var(--muted);font-size:15px;line-height:1.55;}
+    .sub{margin:0 0 10px;color:var(--muted);font-size:16px;line-height:1.4;}
+    .desc{margin:0 0 14px;color:var(--muted);font-size:15px;line-height:1.55;}
+
+    .note{
+      margin: 0 0 18px;
+      color: rgba(242,244,248,.78);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .actions{display:grid;gap:10px;margin-top:6px;}
 
     .btn{
       display:block;
@@ -81,6 +86,26 @@
       font-weight:700;
       padding:14px 16px;
       border-radius:12px;
+      transition: transform .12s ease, filter .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); filter: brightness(1.03);}
+
+    .btn-secondary{
+      display:block;
+      text-align:center;
+      background: transparent;
+      color: var(--txt);
+      text-decoration:none;
+      font-weight:650;
+      padding:13px 16px;
+      border-radius:12px;
+      border:1px solid var(--stroke);
+      transition: transform .12s ease, background-color .12s ease, border-color .12s ease;
+    }
+    .btn-secondary:hover{
+      transform: translateY(-1px);
+      background-color: rgba(242,244,248,.06);
+      border-color: rgba(242,244,248,.30);
     }
 
     .links{
@@ -110,19 +135,26 @@
 <body>
   <div class="wrap">
     <main class="card">
-
       <img class="avatar" src="/perfil.jpg?v=1" alt="Foto de Tiago Scarpelli" />
 
       <h1>Tiago Scarpelli</h1>
       <p class="sub">Psicólogo (CRP 04/25609) • Psicanalista</p>
       <p class="desc">Sessões online por videochamada.</p>
 
-      <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
-        Agendar pelo WhatsApp
-      </a>
+      <p class="note">Se quiser, me envie uma mensagem que retornarei assim que possível.</p>
+
+      <div class="actions">
+        <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+
+        <a class="btn-secondary" href="mailto:scarpellitiago@gmail.com?subject=Agendamento%20-%20Tiago%20Scarpelli&body=Ol%C3%A1%2C%20Tiago.%0D%0AGostaria%20de%20agendar%20uma%20consulta.%0D%0A%0D%0AObrigado!">
+          Enviar e-mail
+        </a>
+      </div>
 
       <div class="links">
-        <a href="mailto:scarpellitiago@gmail.com">E-mail</a>
+        <a href="mailto:scarpellitiago@gmail.com">scarpellitiago@gmail.com</a>
       </div>
 
       <div class="footer">© <span id="y"></span> Tiago Scarpelli</div>
