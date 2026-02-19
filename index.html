@@ -29,7 +29,7 @@
       --sub: rgba(242,244,248,.88);
       --desc: rgba(242,244,248,.72);
       --note: rgba(242,244,248,.62);
-      --btn:#25D366;
+      --btn:#1DB954;
       --stroke: rgba(242,244,248,.22);
     }
 
@@ -125,60 +125,3 @@
       display:block;
       width:100%;
       box-sizing:border-box;
-    }
-
-    .footer{margin-top:18px;text-align:center;color:rgba(242,244,248,.50);font-size:12px}
-
-    /* Ajustes finos para mobile */
-    @media (max-width: 420px){
-      .wrap{padding:18px}
-      .card{padding:22px 18px;border-radius:16px}
-      .avatar{width:96px;height:96px;margin-bottom:12px}
-      h1{font-size:30px}
-      .sub{font-size:15px}
-      .desc{font-size:14.5px}
-      .note{font-size:13px}
-      .actions{gap:9px}
-      .btn{padding:13px 14px}
-      .btn-secondary{padding:12.5px 14px}
-      .sobre{padding:14px;font-size:13.5px}
-      .sobre h2{font-size:16px}
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <main class="card">
-      <img class="avatar" src="/perfil.jpg?v=1" alt="Foto de Tiago Scarpelli" />
-      <h1>Tiago Scarpelli</h1>
-      <p class="sub">Psicólogo (CRP 04/25609) • Psicanalista</p>
-      <p class="desc">Sessões online por videochamada.</p>
-      <p class="note">Se quiser, me envie uma mensagem. Retornarei assim que possível.</p>
-
-      <div class="actions">
-        <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-        <a class="btn-secondary" href="mailto:scarpellitiago@gmail.com?subject=Agendamento%20-%20Tiago%20Scarpelli&body=Ol%C3%A1%2C%20Tiago.%0D%0AGostaria%20de%20agendar%20uma%20consulta.%0D%0A%0D%0AObrigado!">Enviar e-mail</a>
-        <a class="btn-secondary" href="#" onclick="toggleSobre(); return false;">Sobre mim</a>
-      </div>
-
-      <div id="sobre" class="sobre">
-        <h2>Sobre Tiago Scarpelli</h2>
-        <p>Psicólogo graduado pela <strong>UFMG</strong>, com <strong>20 anos de experiência</strong> em atendimento clínico.</p>
-        <p>Mestre em Psicologia Clínica pela <strong>Université Paris 7 - Diderot (França)</strong> e psicanalista com formação pelo <strong>IPSM/MG</strong> (instituição vinculada à Escola Brasileira de Psicanálise e à <em>École de la Cause Freudienne</em>).</p>
-        <p>Realizo atendimentos particulares online para adultos, com foco em escuta clínica e acompanhamento psicanalítico.</p>
-        <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-      </div>
-
-      <div class="footer">© <span id="y"></span> Tiago Scarpelli</div>
-    </main>
-  </div>
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    
-    function toggleSobre() {
-      const sobre = document.getElementById('sobre');
-      sobre.style.display = sobre.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-</body>
-</html>
