@@ -158,7 +158,7 @@
       <div class="actions">
         <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
         <a class="btn-secondary" href="mailto:scarpellitiago@gmail.com?subject=Agendamento%20-%20Tiago%20Scarpelli&body=Ol%C3%A1%2C%20Tiago.%0D%0AGostaria%20de%20agendar%20uma%20consulta.%0D%0A%0D%0AObrigado!">E-mail</a>
-        <a class="btn-secondary" href="#" onclick="toggleSobre(); return false;">Sobre mim</a>
+        <a class="btn-secondary" href="#" onclick="toggleSobre(this); return false;">Sobre mim</a>
       </div>
 
       <div id="sobre" class="sobre">
@@ -172,22 +172,23 @@
       <div class="footer">© <span id="y"></span> Tiago Scarpelli</div>
     </main>
   </div>
+
   <script>
-    (function() {
+    (function () {
       var y = document.getElementById("y");
-      if (y) {
-        y.textContent = new Date().getFullYear();
-      }
+      if (y) y.textContent = new Date().getFullYear();
 
-window.toggleSobre = function() {
-  var sobre = document.getElementById("sobre");
-  var btn = document.getElementById("btn-sobre");
-  if (!sobre || !btn) return;
+      window.toggleSobre = function (btnEl) {
+        var sobre = document.getElementById("sobre");
+        if (!sobre) return;
 
-  var aberto = (sobre.style.display === "block");
-  sobre.style.display = aberto ? "none" : "block";
-  btn.textContent = aberto ? "Sobre mim" : "Fechar";
-}; 
+        var aberto = (sobre.style.display === "block");
+        sobre.style.display = aberto ? "none" : "block";
+
+        if (btnEl && btnEl.textContent != null) {
+          btnEl.textContent = aberto ? "Sobre mim" : "Fechar";
+        }
+      };
     })();
   </script>
 </body>
