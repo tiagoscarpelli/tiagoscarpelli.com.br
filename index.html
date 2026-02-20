@@ -179,12 +179,15 @@
         y.textContent = new Date().getFullYear();
       }
 
-      window.toggleSobre = function() {
-        var sobre = document.getElementById("sobre");
-        if (sobre) {
-          sobre.style.display = (sobre.style.display === "block") ? "none" : "block";
-        }
-      };
+window.toggleSobre = function() {
+  var sobre = document.getElementById("sobre");
+  var btn = document.getElementById("btn-sobre");
+  if (!sobre || !btn) return;
+
+  var aberto = (sobre.style.display === "block");
+  sobre.style.display = aberto ? "none" : "block";
+  btn.textContent = aberto ? "Sobre mim" : "Fechar";
+}; 
     })();
   </script>
 </body>
