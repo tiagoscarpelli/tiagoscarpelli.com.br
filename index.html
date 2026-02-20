@@ -182,23 +182,40 @@
     </main>
   </div>
 
-  <script>
-    (function () {
-      var y = document.getElementById("y");
-      if (y) y.textContent = new Date().getFullYear();
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll('a[href*="wa.me"]');
+  links.forEach(function(link) {
+    link.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'engagement',
+          event_label: 'whatsapp'
+        });
+      }
+    });
+  });
+});
+</script>
 
-      window.toggleSobre = function (btnEl) {
-        var sobre = document.getElementById("sobre");
-        if (!sobre) return;
+<script>
+  (function () {
+    var y = document.getElementById("y");
+    if (y) y.textContent = new Date().getFullYear();
 
-        var aberto = (sobre.style.display === "block");
-        sobre.style.display = aberto ? "none" : "block";
+    window.toggleSobre = function (btnEl) {
+      var sobre = document.getElementById("sobre");
+      if (!sobre) return;
 
-        if (btnEl && btnEl.textContent != null) {
-          btnEl.textContent = aberto ? "Sobre mim" : "Fechar";
-        }
-      };
-    })();
-  </script>
+      var aberto = (sobre.style.display === "block");
+      sobre.style.display = aberto ? "none" : "block";
+
+      if (btnEl && btnEl.textContent != null) {
+        btnEl.textContent = aberto ? "Sobre mim" : "Fechar";
+      }
+    };
+  })();
+</script>
+
 </body>
 </html>
