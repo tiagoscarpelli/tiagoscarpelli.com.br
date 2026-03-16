@@ -1,114 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiago Scarpelli | Psicanalista</title>
-    
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2D80SE9ML"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-L2D80SE9ML');
-    </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L2D80SE9ML">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f8f9fa;
-            color: #2c3e50;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        .container {
-            background: white;
-            padding: 50px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            max-width: 450px;
-            width: 90%;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.2em;
-            margin: 0 0 10px 0;
-            color: #1a252f;
-        }
-        .divider {
-            width: 50px;
-            height: 2px;
-            background-color: #2c3e50;
-            margin: 20px auto;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #34495e;
-        }
-        .bio {
-            font-size: 1.05em;
-            color: #555;
-            margin-bottom: 35px;
-        }
-        .cta-button {
-            display: block;
-            background-color: #25d366;
-            color: white;
-            padding: 18px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1.1em;
-            font-family: sans-serif;
-            transition: transform 0.2s;
-        }
-        .cta-button:active {
-            transform: scale(0.98);
-        }
-        .footer-note {
-            margin-top: 30px;
-            font-style: italic;
-            color: #95a5a6;
-            font-size: 0.9em;
-        }
-    </style>
+  gtag('config', 'G-L2D80SE9ML');
+</script>  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiago Scarpelli | Psicólogo e Psicanalista</title>
+  <meta name="description" content="Psicólogo (CRP 04/25609) • Psicanalista. Sessões online por videochamada." />
+
+  <!-- Open Graph (preview WhatsApp/Instagram) -->
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tiago Scarpelli | Psicólogo e Psicanalista" />
+  <meta property="og:description" content="Psicólogo (CRP 04/25609) • Psicanalista. Sessões online por videochamada." />
+  <meta property="og:url" content="https://tiagoscarpelli.com.br/" />
+  <meta property="og:image" content="https://tiagoscarpelli.com.br/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tiago Scarpelli | Psicólogo e Psicanalista" />
+  <meta name="twitter:description" content="Psicólogo (CRP 04/25609) • Psicanalista. Sessões online por videochamada." />
+  <meta name="twitter:image" content="https://tiagoscarpelli.com.br/og.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card: rgba(255,255,255,.12);
+      --txt: rgba(242,244,248,1);
+      --sub: rgba(242,244,248,.88);
+      --desc: rgba(242,244,248,.72);
+      --note: rgba(242,244,248,.62);
+      --btn:#1DB954;
+      --stroke: rgba(242,244,248,.22);
+    }
+
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto",Arial,sans-serif;
+      color: var(--txt);
+      background-color: var(--bg);
+      background-image: linear-gradient(rgba(11,18,32,.70), rgba(11,18,32,.70)), url("./fundo.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+
+    .card{
+      width:100%;
+      max-width:520px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius:18px;
+      padding:26px 22px;
+      box-shadow:0 18px 60px rgba(0,0,0,.35);
+      text-align:center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .avatar{
+      width:108px;height:108px;border-radius:999px;
+      object-fit:cover;display:block;margin:0 auto 14px;
+      filter: grayscale(100%) contrast(1.05) brightness(1.02);
+      border:2px solid rgba(242,244,248,.22);
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px;color:var(--txt)}
+    .sub{margin:0 0 10px;font-size:16px;line-height:1.4;color:var(--sub);font-weight:500}
+    .desc{margin:0 0 14px;font-size:15px;line-height:1.55;color:var(--desc)}
+    .note{margin:0 0 18px;font-size:13.5px;line-height:1.55;color:var(--note)}
+
+    .actions{display:grid;gap:10px;margin-top:6px}
+
+    .btn{
+      display:block;text-align:center;
+      background:var(--btn);color:#06210f;text-decoration:none;
+      font-weight:700;padding:14px 16px;border-radius:12px;
+    }
+
+    .btn-secondary{
+      display:block;text-align:center;
+      background:transparent;color:var(--txt);text-decoration:none;
+      font-weight:650;padding:13px 16px;border-radius:12px;
+      border:1px solid var(--stroke);
+    }
+
+    .sobre{
+      display:none;
+      margin-top:18px;
+      padding:16px;
+      background: rgba(255,255,255,.08);
+      border-radius:12px;
+      text-align:left;
+      line-height:1.6;
+      font-size:14px;
+      color:var(--desc);
+    }
+
+    .sobre h2{
+      margin:0 0 12px 0;
+      font-size:18px;
+      color:var(--txt);
+      text-align:center;
+    }
+
+    .sobre p{
+      margin:0 0 10px 0;
+    }
+
+    .sobre .btn{
+      margin-top:14px;
+      display:block;
+      width:100%;
+      box-sizing:border-box;
+    }
+
+    .footer{margin-top:18px;text-align:center;color:rgba(242,244,248,.50);font-size:12px}
+
+    /* Ajustes finos para mobile */
+    @media (max-width: 420px){
+      .wrap{padding:18px}
+      .card{padding:22px 18px;border-radius:16px}
+      .avatar{width:96px;height:96px;margin-bottom:12px}
+      h1{font-size:30px}
+      .sub{font-size:15px}
+      .desc{font-size:14.5px}
+      .note{font-size:13px}
+      .actions{gap:9px}
+      .btn{padding:13px 14px}
+      .btn-secondary{padding:12.5px 14px}
+      .sobre{padding:14px;font-size:13.5px;line-height:1.55}
+      .sobre h2{font-size:16px}
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <main class="card">
+      <img class="avatar" src="/perfil.jpg?v=1" alt="Foto de Tiago Scarpelli" />
+      <h1>Tiago Scarpelli</h1>
+      <p class="sub">Psicólogo (CRP 04/25609) • Psicanalista</p>
+      <p class="desc">Atendimento online. Sessões individuais por videochamada.</p>
+      <p class="note">Para horários e valores, me chame no WhatsApp.</p>
 
-    <div class="container">
-        <h1>Tiago Scarpelli</h1>
-        <div class="divider"></div>
-        
-        <p class="subtitle">Psicanalista Clínico</p>
-        
-        <p class="bio">
-            <strong>20 anos de experiência clínica.</strong><br>
-            Formação pela <strong>UFMG</strong> e <br>
-            <strong>Université Paris 7 - Diderot (França)</strong>.
-        </p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        <a class="btn-secondary" href="mailto:scarpellitiago@gmail.com?subject=Agendamento%20-%20Tiago%20Scarpelli&body=Ol%C3%A1%2C%20Tiago.%0D%0AGostaria%20de%20agendar%20uma%20consulta.%0D%0A%0D%0AObrigado!">E-mail</a>
+        <a class="btn-secondary" href="#" onclick="toggleSobre(this); return false;">Sobre mim</a>
+      </div>
 
-        <a href="https://wa.me/5531991823456" class="cta-button" id="whatsapp-btn">
-            Agendar pelo WhatsApp
-        </a>
+      <div id="sobre" class="sobre">
+        <h2>Sobre Tiago Scarpelli</h2>
+        <p><strong>Mestre em Psicologia Clínica pela Université Paris 7 – Diderot (França).</strong></p>
+        <p><strong>Psicanalista com 20 anos de experiência</strong>, com formação pelo IPSM/MG (instituição vinculada à Escola Brasileira de Psicanálise e à <em>École de la Cause Freudienne</em>).</p>
+        <p><strong>Graduado em Psicologia pela UFMG.</strong></p>
+        <a class="btn" href="https://wa.me/5531991772929?text=Ol%C3%A1%2C%20Tiago.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      </div>
 
-        <p class="footer-note">Atendimento Particular (Online)</p>
-    </div>
+      <div class="footer">© <span id="y"></span> Tiago Scarpelli</div>
+    </main>
+  </div>
 
-    <script>
-        document.getElementById('whatsapp-btn').addEventListener('click', function() {
-            gtag('event', 'whatsapp_click', {
-                'event_category': 'conversion',
-                'event_label': 'WhatsApp Contact'
-            });
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var links = document.querySelectorAll('a[href*="wa.me"]');
+  links.forEach(function(link) {
+    link.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'engagement',
+          event_label: 'whatsapp'
         });
-    </script>
+      }
+    });
+  });
+});
+</script>
+
+<script>
+  (function () {
+    var y = document.getElementById("y");
+    if (y) y.textContent = new Date().getFullYear();
+
+    window.toggleSobre = function (btnEl) {
+      var sobre = document.getElementById("sobre");
+      if (!sobre) return;
+
+      var aberto = (sobre.style.display === "block");
+      sobre.style.display = aberto ? "none" : "block";
+
+      if (btnEl && btnEl.textContent != null) {
+        btnEl.textContent = aberto ? "Sobre mim" : "Fechar";
+      }
+    };
+  })();
+</script>
 
 </body>
 </html>
