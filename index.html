@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiago Scarpelli | Psicanalista Clínico</title>
+    <title>Tiago Scarpelli | Psicanalista</title>
     
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2D80SE9ML"></script>
@@ -17,27 +17,31 @@
     <style>
         body {
             font-family: 'Georgia', serif;
-            background-color: #fdfdfd;
+            background-color: #f8f9fa;
             color: #2c3e50;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100-vh;
-            text-align: center;
+            min-height: 100vh;
+            line-height: 1.6;
         }
         .container {
-            max-width: 500px;
-            padding: 40px 20px;
+            background: white;
+            padding: 50px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
         }
         h1 {
             font-size: 2.2em;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+            margin: 0 0 10px 0;
             color: #1a252f;
         }
         .divider {
-            width: 40px;
+            width: 50px;
             height: 2px;
             background-color: #2c3e50;
             margin: 20px auto;
@@ -46,32 +50,32 @@
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 10px;
+            color: #34495e;
         }
         .bio {
             font-size: 1.05em;
-            line-height: 1.6;
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .cta-button {
-            display: inline-block;
+            display: block;
             background-color: #25d366;
             color: white;
-            padding: 18px 30px;
+            padding: 18px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
             font-size: 1.1em;
-            transition: background 0.3s;
             font-family: sans-serif;
+            transition: transform 0.2s;
         }
-        .cta-button:hover {
-            background-color: #128c7e;
+        .cta-button:active {
+            transform: scale(0.98);
         }
         .footer-note {
             margin-top: 30px;
             font-style: italic;
-            color: #7f8c8d;
+            color: #95a5a6;
             font-size: 0.9em;
         }
     </style>
@@ -80,26 +84,31 @@
 
     <div class="container">
         <h1>Tiago Scarpelli</h1>
-        
         <div class="divider"></div>
         
-        <p class="subtitle">Psicanalista Clínico | 20 anos de experiência</p>
+        <p class="subtitle">Psicanalista Clínico</p>
         
         <p class="bio">
-            Formação pela <strong>UFMG</strong> e <strong>Université Paris 7 - Diderot (França)</strong>.<br>
-            Membro do IPSM/MG (EBP/Escola da Causa Freudiana).
+            <strong>20 anos de experiência clínica.</strong><br>
+            Formação pela <strong>UFMG</strong> e <br>
+            <strong>Université Paris 7 - Diderot (França)</strong>.
         </p>
 
         <a href="https://wa.me/5531991823456" class="cta-button" id="whatsapp-btn">
             Agendar pelo WhatsApp
         </a>
 
-        <p class="footer-note">Atendimento Particular Exclusivo (Online)</p>
+        <p class="footer-note">Atendimento Particular (Online)</p>
     </div>
 
-    <!-- Script de Rastreamento de Conversão -->
     <script>
         document.getElementById('whatsapp-btn').addEventListener('click', function() {
             gtag('event', 'whatsapp_click', {
                 'event_category': 'conversion',
                 'event_label': 'WhatsApp Contact'
+            });
+        });
+    </script>
+
+</body>
+</html>
